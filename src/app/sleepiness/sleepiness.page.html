@@ -1,0 +1,60 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start" [routerLink]="['/home']">
+      <ion-icon size="large" name="arrow-round-back"></ion-icon>
+    </ion-buttons>
+    <ion-title>Sleepiness</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <div>
+    <!-- <ion-icon name="happy"></ion-icon> -->
+    <h6>Scale Your Sleepiness Level</h6>
+    <p>
+      1 - Feeling active, vital, alert, or wide awake. <br />
+      2 - Functioning at high levels, but not at peak; able to concentrate
+      <br />
+      3 - Awake, but relaxed; responsive but not fully alert <br />
+      4 - Somewhat foggy, let down <br />
+      5 - Foggy; losing interest in remaining awake; slowed down <br />
+      6 - Sleepy, woozy, fighting sleep; prefer to lie down <br />
+      7 - No longer fighting sleep, sleep onset soon; having dream-like thoughts
+    </p>
+  </div>
+  <ion-row>
+    <ion-col>
+      <ion-range
+        min="1"
+        max="7"
+        step="1"
+        snaps="true"
+        pin="true"
+        ticks="true"
+        mode="ios"
+        [(ngModel)]="sleepiness"
+      ></ion-range>
+    </ion-col>
+  </ion-row>
+
+  <ion-row>
+    <ion-col>
+      <ion-button
+        slots="start"
+        color="medium"
+        size="default"
+        [routerLink]="['/home']"
+        >Go Back</ion-button
+      >
+    </ion-col>
+    <ion-col>
+      <ion-button
+        slots="end"
+        color="success"
+        size="default"
+        (click)="logSleepiness()"
+        >Submit</ion-button
+      >
+    </ion-col>
+  </ion-row>
+</ion-content>

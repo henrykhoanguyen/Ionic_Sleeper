@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Sleep Tracker
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="ion-padding">
+    <ion-icon name="md-bed"></ion-icon>
+  </div>
+  <div class="ion-padding">
+    <ion-button color="medium" expand="block" [routerLink]="['/overnight']">Log My Sleep</ion-button>
+  </div>
+  <div class="ion-padding">
+    <ion-button color="medium" expand="block" [routerLink]="['/sleepiness']">Log Sleepiness Level</ion-button>
+  </div>
+  <div class="ion-padding">
+    <ion-button color="medium" expand="block" [routerLink]="['/viewdata']">View Logged Data</ion-button>
+  </div>
+</ion-content>
