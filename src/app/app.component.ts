@@ -5,7 +5,7 @@ import { SplashScreen } from '@ionic-native/splash-screen/ngx';
 import { StatusBar } from '@ionic-native/status-bar/ngx';
 // Firebase
 import * as firebase from 'firebase';
-import { firebaseConfig } from "./environment";
+import { firebaseConfig } from "./config/environment";
 
 @Component({
   selector: 'app-root',
