@@ -8,9 +8,9 @@
 </ion-header>
 
 <ion-content>
-  <div class="ion-padding">
+  <ion-item class="ion-padding" lines="none">
     <ion-icon name="moon"></ion-icon>
-  </div>
+  </ion-item>
   <ion-item>
     <ion-label>Start Date</ion-label>
     <ion-datetime displayFormat="MM-DD-YYYY" [(ngModel)]="sleepDateStart"
@@ -35,16 +35,16 @@
       >{{sleepTimeEnd}}</ion-datetime
     >
   </ion-item>
-  <ion-row>
+  <ion-item lines="none">
     <ion-col class="ion-align-self-center">
-      <ion-button color="medium" size="large" [routerLink]="['/home']"
+      <ion-button color="medium" size="default" [routerLink]="['/home']"
         >Go Back</ion-button
       >
     </ion-col>
     <ion-col class="ion-align-self-center">
-      <ion-button color="success" size="large" (click)="logSleep()"
+      <ion-button color="success" size="default" (click)="logSleep()"
         >Submit</ion-button
       >
     </ion-col>
-  </ion-row>
+  </ion-item>
 </ion-content>
